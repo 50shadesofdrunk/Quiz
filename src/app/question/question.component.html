@@ -21,6 +21,6 @@
 
   <hr>
 
-  <p>{{questions}}</p>
+  <p *ngFor="let question of questions">{{question.question}}</p>
 
 

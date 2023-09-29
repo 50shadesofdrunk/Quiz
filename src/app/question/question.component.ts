@@ -12,7 +12,7 @@ export class QuestionComponent {
 
 
   submitQuestion() {
-    // this.questions.push({this.newQuestion})
+    this.questions.push(this.newQuestion)
     console.log(this.newQuestion)
     // return this.newQuestion
 
