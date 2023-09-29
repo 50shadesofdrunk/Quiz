@@ -1,0 +1,26 @@
+<div class="q1">
+  <input [(ngModel)]="newQuestion.question" class="question" type="text" />
+
+<ul>
+
+
+  <input class="answer1" type="radio" />
+  <input [(ngModel)]="newQuestion.answer1" type="text" />
+  <input type="radio" />
+  <input [(ngModel)]="newQuestion.answer2" type="text" />
+  <input type="radio" />
+  <input [(ngModel)]="newQuestion.answer3" type="text" />
+  <input type="radio" />
+  <input [(ngModel)]="newQuestion.answer4" type="text" />
+</ul>
+
+</div>
+
+  <button (click)="submitQuestion()">Submit</button>
+
+
+  <hr>
+
+  <p>{{questions}}</p>
+
+
