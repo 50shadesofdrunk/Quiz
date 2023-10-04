@@ -4,23 +4,34 @@
 <ul>
 
 
-  <input class="answer1" type="radio" />
+  <input name="radioGroup" type="radio" [(ngModel)]="newQuestion.correctAnswer" value="1"/>
   <input [(ngModel)]="newQuestion.answer1" type="text" />
-  <input type="radio" />
+  <input name="radioGroup" type="radio" [(ngModel)]="newQuestion.correctAnswer" value="2" />
   <input [(ngModel)]="newQuestion.answer2" type="text" />
-  <input type="radio" />
+  <input name="radioGroup" type="radio" [(ngModel)]="newQuestion.correctAnswer" value="3"/>
   <input [(ngModel)]="newQuestion.answer3" type="text" />
-  <input type="radio" />
+  <input name="radioGroup" type="radio" [(ngModel)]="newQuestion.correctAnswer" value="4"/>
   <input [(ngModel)]="newQuestion.answer4" type="text" />
 </ul>
 
 </div>
 
-  <button (click)="submitQuestion()">Submit</button>
+  <button (click)="submitQuestion()">Next Question</button>
 
 
   <hr>
 
-  <p *ngFor="let question of questions">{{question.question}}</p>
+  <div *ngFor="let question of questions">
+    <p>{{question.question}}</p>
+    <p>{{question.answer1}}</p>
+    <p>{{question.answer2}}</p>
+    <p>{{question.answer3}}</p>
+    <p>{{question.answer4}}</p>
+    <p>{{question.correctAnswer}}</p>
+    <hr>
+  </div>
 
+
+  <button (click)="submitQuiz()">Submit</button>
+  <button (click)="clear()">Clear</button>
 
