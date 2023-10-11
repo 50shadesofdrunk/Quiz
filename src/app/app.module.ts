@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { QuestionComponent } from './question/question.component';
-import { QuestionDisplayComponent } from './question-display/question-display.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { QuizDisplayComponent } from './quiz-display/quiz-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
-    QuestionDisplayComponent
+    HeaderComponent,
+    QuizDisplayComponent
   ],
   imports: [
     BrowserModule,

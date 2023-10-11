@@ -1,1 +1,3 @@
-<app-question></app-question>
+<app-header (pageToShow)="pageToShow = $event"></app-header>
+<app-question (quizCreated)="onQuizCreated($event)" *ngIf="pageToShow === 'question'"></app-question>
+<app-quiz-display [quizzes]="quizzes" *ngIf="pageToShow === 'display'"></app-quiz-display>

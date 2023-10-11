@@ -2,8 +2,6 @@
   <input [(ngModel)]="newQuestion.question" class="question" type="text" />
 
 <ul>
-
-
   <input name="radioGroup" type="radio" [(ngModel)]="newQuestion.correctAnswer" value="1"/>
   <input [(ngModel)]="newQuestion.answer1" type="text" />
   <input name="radioGroup" type="radio" [(ngModel)]="newQuestion.correctAnswer" value="2" />
@@ -16,7 +14,7 @@
 
 </div>
 
-  <button (click)="submitQuestion()">Next Question</button>
+  <button (click)="submitQuestion()" [disabled]="qCount >=10">Next Question</button>
 
 
   <hr>
