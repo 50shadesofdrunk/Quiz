@@ -12,4 +12,11 @@ export class QuizDisplayComponent {
 ngOnChanges() {
   console.log(this.quizzes)
 }
+
+clear() {
+  this.quizzes = [];
+
+  localStorage.setItem('quizStorage', JSON.stringify(this.quizzes))
+
+  }
 }

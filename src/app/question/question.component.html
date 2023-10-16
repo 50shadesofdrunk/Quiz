@@ -1,4 +1,7 @@
 <div class="q1">
+  <label for="quizName">Quiz Name: </label>
+  <input id="quizName" type="text">
+  <br>
   <input [(ngModel)]="newQuestion.question" class="question" type="text" />
 
 <ul>
@@ -10,11 +13,12 @@
   <input [(ngModel)]="newQuestion.answer3" type="text" />
   <input name="radioGroup" type="radio" [(ngModel)]="newQuestion.correctAnswer" value="4"/>
   <input [(ngModel)]="newQuestion.answer4" type="text" />
+
 </ul>
 
 </div>
 
-  <button (click)="submitQuestion()" [disabled]="qCount >=10">Next Question</button>
+  <button class="btn btn-success" (click)="submitQuestion()" [disabled]="qCount >=10">Next Question</button>
 
 
   <hr>
@@ -30,6 +34,7 @@
   </div>
 
 
-  <button (click)="submitQuiz()">Submit</button>
-  <button (click)="clear()">Clear</button>
+  <br>
+  <button class="btn btn-primary" (click)="submitQuiz()">Submit</button>
+  <button class="btn btn-danger" (click)="clear()">Clear</button>
 

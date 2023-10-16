@@ -9,7 +9,7 @@ import { Quiz } from './quiz';
 export class AppComponent {
   title = 'Quiz';
   quizzes: any[] = JSON.parse(localStorage.getItem('quizStorage') || '[]')
-  pageToShow = 'display'
+  pageToShow = 'question'
 
   onQuizCreated(quizKey: Quiz) {
     console.log(quizKey.questions)
